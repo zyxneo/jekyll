@@ -4,3 +4,4 @@ Markdown Cheatsheet,https://github.com/adam-p/markdown-here/wiki/Markdown-Cheats
 Github-flavored Markdown,https://help.github.com/articles/basic-writing-and-formatting-syntax/, Create sophisticated formatting for your prose and code on GitHub with simple syntax.
 Liquid,https://shopify.github.io/liquid/,"Safe, customer facing template language for flexible web apps."
 MkDocs,http://www.mkdocs.org/,"MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation."
+Minima,https://github.com/jekyll/minima, For now, GitHub Pages only supports Jekyll’s default theme, Minima. Minima is a one-size-fits-all Jekyll theme for writers.
