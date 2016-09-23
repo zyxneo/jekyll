@@ -14,10 +14,21 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
+        <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <h3>Documentation related links</h3>
+  <ul>
+    {% for link in site.data.documentation-tools-links %}
+      <li>
+        <a href="{{ link.href }}">
+          {{ link.name }}
+        </a> - {{ link.desc }}
+      </li>
+    {% endfor %}
+  </ul>
+
 
 </div>

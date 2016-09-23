@@ -1,0 +1,11 @@
+
+{% if page.categories contains "example" %}
+  <h3>More examples</h3>
+  <ul>
+    {% for page in site.pages %}
+      {% if page.categories contains "example" %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

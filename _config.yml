@@ -63,6 +63,7 @@ incremental: false
 # Outputting
 permalink:     date
 paginate_path: /page:num
+paginate:       5
 timezone:      null
 
 quiet:    false
@@ -98,3 +99,6 @@ defaults:
     values:
       layout: "default"
       author: "Szilágyi Balázs"
+      excerpt_separator: <!--more--> # Completely disable excerpts by setting your excerpt_separator to "".
+
+categories: [example,links,docu]
