@@ -19,3 +19,8 @@ $ bundle install
 $ bundle exec jekyll serve
 # => Now browse to http://localhost:4000
 ```
+
+### More infos
+
+* [GitHub Pages Ruby Gem](https://github.com/github/pages-gem)
+* [Using Github to serve Jekyll](https://www.sylvaindurand.org/using-github-to-serve-jekyll/)
