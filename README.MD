@@ -1,6 +1,6 @@
 # [Documentation](https://zyxneo.github.io)
 
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/twbs/bootstrap)
+[![Build Status](https://img.shields.io/travis/zyxneo/zyxneo.github.io/master.svg)](https://travis-ci.org/zyxneo/zyxneo.github.io)
 
 ### Requirements
 
