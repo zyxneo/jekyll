@@ -1,6 +1,6 @@
-# Documentation entry point
+# [Documentation](https://zyxneo.github.io)
 
-## installation
+[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/twbs/bootstrap)
 
 ### Requirements
 

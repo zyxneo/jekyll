@@ -40,6 +40,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.2.1)
   minima
+  github-pages
+  html-proofer
 
 RUBY VERSION
    ruby 2.2.2p95
