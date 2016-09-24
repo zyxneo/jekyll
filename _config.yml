@@ -15,8 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Documentation
 email: zyxneo@gmail.com
+author: Szilágyi Balázs
 description: > # this means to ignore newlines until "baseurl:"
-  It is a demonstrational page. It collects development tools, techniques and references
+  It is a demonstrational page of development tools, techniques and references
 github_username: zyxneo
 
 # Server
@@ -98,4 +99,4 @@ defaults:
       author: "Szilágyi Balázs"
       excerpt_separator: <!--more--> # Completely disable excerpts by setting your excerpt_separator to "".
 
-categories: [example,links,docu]
+categories: [example,links,documentation,tools,techniques,references]

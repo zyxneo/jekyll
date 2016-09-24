@@ -31,5 +31,14 @@ title: Documentation
     {% endfor %}
   </ul>
 
+<h3>All pages</h3>
+<ul>
+{% for my_page in site.pages %}
+  {% if my_page.title %}
+  <li><a class="page-link" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 
 </div>
