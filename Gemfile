@@ -25,4 +25,6 @@ gem "minima"
 
 # Travis allows your to generate the website each time you push something, in order to check nothing is wrong.
 # It is also possible to add some other tests like htmlproofer which checks if the HTML code is valid and there are no rotten links.
-gem "html-proofer"
+#group :test do
+#  gem "html-proofer"
+#end
