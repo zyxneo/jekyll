@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
+ruby "2.2.2"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -25,4 +25,4 @@ gem "minima"
 
 # Travis allows your to generate the website each time you push something, in order to check nothing is wrong.
 # It is also possible to add some other tests like htmlproofer which checks if the HTML code is valid and there are no rotten links.
-gem 'html-proofer'
+gem "html-proofer"
