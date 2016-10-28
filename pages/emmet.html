@@ -1,0 +1,566 @@
+---
+title: Emmet cheat sheet
+tags: html, css, hacker
+categories: docu, example
+---
+
+<h2>Emmet cheat seet</h2>
+
+<p>The most common examples only. Full documentetion on <a href="http://docs.emmet.io">docs.emmet.io</a></p>
+
+<section class="doc-section doc-section_syntax">
+  <h2 class="doc-section__title">Syntax</h2>
+  <div class="doc-section__desc"></div>
+  <div class="doc-section__content">
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Child: ></h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          nav>ul>li
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<nav>
+  <ul>
+    <li></li>
+  </ul>
+</nav>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Sibling: +</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          div+p+bq
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div></div>
+<p></p>
+<blockquote></blockquote>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Climb-up: ^</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          div+div>p>span+em^^bq
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div></div>
+<div>
+  <p><span></span><em></em></p>
+</div>
+<blockquote></blockquote>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Grouping: ()</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          (div>dl>(dt+dd)*3)+footer>p
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div>
+  <dl>
+    <dt></dt>
+    <dd></dd>
+    <dt></dt>
+    <dd></dd>
+    <dt></dt>
+    <dd></dd>
+  </dl>
+</div>
+<footer>
+  <p></p>
+</footer>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Multiplication: *</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ul>li*5
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Item numbering: $</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          h$[title=item$]{Header $}*3
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<h1 title="item1">Header 1</h1>
+<h2 title="item2">Header 2</h2>
+<h3 title="item3">Header 3</h3>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ul>li.item$@-*5
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<ul>
+  <li class="item5"></li>
+  <li class="item4"></li>
+  <li class="item3"></li>
+  <li class="item2"></li>
+  <li class="item1"></li>
+</ul>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ul>li.item$$$@3*5
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<ul>
+  <li class="item003"></li>
+  <li class="item004"></li>
+  <li class="item005"></li>
+  <li class="item006"></li>
+  <li class="item007"></li>
+</ul>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">ID and CLASS attributes</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          #header
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div id="header"></div>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          .title
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div class="title"></div>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          p#id.class1.class2
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<p id class="class1 class2"></p>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Custom attributes</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          p[title="Hello world"]
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<p title="Hello world"></p>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          td[rowspan=2 colspan=3 title]
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<td rowspan="2" colspan="3" title=""></td>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          [a='value1' b="value2" c=value3]
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div a="value1" b="value2" c="value3"></div>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Text: {}</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          p>{Click }+a{here}+{ to continue}
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<p>Click <a href="">here</a> to continue</p>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Implicit tag names</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          .class
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div class></div>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          em>.class
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<em><span class></span></em>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ul>.class
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<ul>
+  <li class></li>
+</ul>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          table>.row>.col
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<table>
+  <tr class="row">
+    <td class="col"></td>
+  </tr>
+</table>
+{% endhighlight %}
+      </dl>
+    </section>
+  </div>
+</section>
+
+<section class="doc-section doc-section_syntax">
+  <h2 class="doc-section__title">HTML</h2>
+  <div class="doc-section__desc"><p>All unknown abbreviations will be transformed to tag, e.g. <code>foo</code> → <code>&lt;foo&gt;&lt;/foo&gt;</code>.</p></div>
+  <div class="doc-section__content">
+    <section class="doc-subsection">
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          !
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+|
+</body>
+</html>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          a
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<a href="|">|</a>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          link:css
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<link rel="stylesheet" href="|style|.css">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          meta:utf
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          meta:vp
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          script:src
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<script src="|"></script>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          img
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<img src="|" alt="|">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          img:z
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<img sizes="|" srcset="|" src="|" alt="|">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          form:post
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<form action="|" method="post">|</form>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          inp
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<input type="text" name="|" id="|">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          input:search
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<input type="search" name="|" id="|">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          input:c
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<input type="checkbox" name="|" id="|">
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          select
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<select name="|" id="|">|</select>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          opt
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<option value="|">|</option>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          tarea
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<textarea name="|" id="|" cols="30" rows="10">|</textarea>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          btn:s
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<button type="submit">|</button>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ri:a
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<picture>
+  <source media="(min-width: )" srcset="|">
+  <img src="|" alt="|">
+</picture>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          ri:t
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<picture>
+  <source srcset="|" type="image/">
+  <img src="|" alt="|">
+</picture>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          dl+
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<dl>
+  <dt>|</dt>
+  <dd>|</dd>
+</dl>
+{% endhighlight %}
+      </dl>
+
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">
+          table+
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<table>
+  <tr>
+    <td>|</td>
+  </tr>
+</table>
+{% endhighlight %}
+      </dl>
+    </section>
+
+    <section class="doc-subsection">
+      <h3 class="doc-subsection__title">Complex example</h3>
+      <dl class="doc-snippet">
+        <dt class="doc-snippet__name">.wrapper>(hdr(a.logo>img)(nav>ul>(li.item$>a{link $}>.icon$)*4))mn>(sect>art>(h2{title $}^p{lorem ipsum}^btn:s))*3^(ftr>adr{footer})
+        </dt>
+        <dd class="doc-snippet__value doc-snippet__value_undefined">
+{% highlight html %}
+<div class="wrapper">
+  <main>
+    <header>
+      <a href="" class="logo"><img src="" alt=""></a>
+      <nav>
+        <ul>
+          <li class="item1"><a href="">link 1<span class="icon1"></span></a></li>
+          <li class="item2"><a href="">link 2<span class="icon2"></span></a></li>
+          <li class="item3"><a href="">link 3<span class="icon3"></span></a></li>
+          <li class="item4"><a href="">link 4<span class="icon4"></span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+        <h2>title 1</h2>
+        <p>lorem ipsum</p>
+        <button type="submit"></button>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2>title 2</h2>
+        <p>lorem ipsum</p>
+        <button type="submit"></button>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2>title 3</h2>
+        <p>lorem ipsum</p>
+        <button type="submit"></button>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <address>footer</address>
+  </footer>
+</div>
+{% endhighlight %}
+      </dl>
+    </section>
+
+
+  </div>
+</section>

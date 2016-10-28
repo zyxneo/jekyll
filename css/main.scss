@@ -37,3 +37,47 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+.doc-section {
+    margin-bottom: 40px;
+    clear: both;
+}
+
+.doc-section__title {
+    page-break-after: avoid;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $grey-color;
+}
+
+.doc-section__content {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+.doc-subsection {
+    clear: both;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    column-break-inside: avoid;
+}
+
+.doc-subsection__title {
+    page-break-after: avoid;
+}
+
+.doc-subsection:first-child .doc-subsection__title {
+    margin-top: 0;
+}
+
+.doc-snippet {
+    -webkit-column-break-inside: avoid;
+    column-break-inside: avoid;
+    margin-bottom: 20px;
+}
