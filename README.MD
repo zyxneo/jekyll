@@ -14,6 +14,7 @@ More info under [installation documentation](https://jekyllrb.com/docs/installat
 ```
 $ gem install jekyll
 $ gem install rouge
+$ gem install bundler
 
 $ bundle install
 $ bundle exec jekyll serve
