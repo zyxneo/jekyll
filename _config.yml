@@ -17,7 +17,7 @@ title: Documentation
 email: zyxneo@gmail.com
 author: Szilágyi Balázs
 description: > # this means to ignore newlines until "baseurl:"
-  It is a demonstrational page of development tools, techniques and references
+  This is a demonstrational page of development tools, techniques, experiments and references.
 github_username: zyxneo
 
 # Server
@@ -50,7 +50,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      []
+plugins:   []
 
 # Conversion
 markdown:    kramdown
@@ -93,10 +93,16 @@ theme: minima
 defaults:
   -
     scope:
+      path: "assets/img"
+    values:
+      image: true
+
+  -
+    scope:
       path: ""
     values:
       layout: "default"
       author: "Szilágyi Balázs"
       excerpt_separator: <!--more--> # Completely disable excerpts by setting your excerpt_separator to "".
 
-categories: [example,links,documentation,tools,techniques,references,tutorials]
+categories: [example,links,documentation,tools,techniques,references,tutorials,experiments]

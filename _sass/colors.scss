@@ -1,6 +1,7 @@
 .palette {
   display: flex;
   flex-wrap: wrap;
+  margin: -10px;
 
   &__item {
     flex: 1;

@@ -3,7 +3,9 @@ title:  "Colors"
 categories: documentation,references
 ---
 
-<h3>Web color reference</h3>
+### Web color reference
+
+This experiment shows the usage of CSV datasources in Jekyll. Content is arranged with flexbox. An extra bootstrap modal is added.
 
 <div class="palette">
   {% for row in site.data.colors %}
@@ -25,7 +27,6 @@ categories: documentation,references
     </div>
   {% endfor %}
 </div>
-
 
 <div class="modal fade" id="colorModal" tabindex="-1" role="dialog" aria-labelledby="colorModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
