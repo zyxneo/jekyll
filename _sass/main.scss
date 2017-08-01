@@ -1,0 +1,55 @@
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  &__item {
+    flex: 1;
+    flex-basis: 150px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__sample {
+    height: 50px;
+  }
+}
+
+.modal-sample {
+  height: 100px;
+}
+
+.gallery {
+  &__item {
+    margin-bottom: 30px;
+
+    &[data-image] {
+      .gallery__image {
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+// Cross fading images
+.crf {
+  position: relative;
+  text-align: center;
+
+  img {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s;
+    left: 0;
+    top: 0;
+
+    &.is-active {
+      position: relative;
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
