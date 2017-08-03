@@ -1,10 +1,12 @@
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  on:
-    branch: master
+language: ruby
+rvm:
+- 2.2.2
+
+install: gem install minima github-pages html-proofer
+script: bundle exec jekyll build
 
 env:
-  matrix:
-    secure: BGx+RbuKKZ5aCtqbEryDR5qLz9qVP/VLlNTdozX6DibHFpiwOWNa2EEcULvo6DMj3elSifPAwnGbpxBMKvch2MNcFzsCo2vttMK7ihzFg1t8XiHQnjcmPBlyff+LZ3ZhuKFn+lWyEMaFRSuY2x/uErKtldTS6NI7FwRMqufEuePVwkYUA2qMIrcOaoX0wL29kfDAEUgbTIowO02yYJ4JLi01Lwz/Wr3W4Ed9wqL1oIRfYS9pKuepSPeuNEgfFHhFsnIlCYPFv7sgcyB2NR1UJJP44fdRYTBKsaVOkvHA/l3/B3E2+OmHaIhwxR6kpfuSijq2/3yWVVwhkVVu6bQF5Bb1RYepSp8fTz4SDd0+tCeK1r7SnQ/FHR+kXjXyHCf791XIdjPPjuyOjgocYMp61vtsL+OAwd27dWf/H7UWftArJ/gVTXIOiZ21KGv1KjZQsIoiP2oBf1a9KbsbsI23olTpmzSNpRHKxsxy7sRsfgdtuS1ZxZwBaLCd90WFpEpI1BlyqP061f1ZAldPTZaqZwKRy0Rhftp8YpUt6QWWlcpmJB6RvITr8OQ82LXTSEU5fgUDolbXn9/49TGpbxUOdO1vIbaE19gZtYQEE6ReuxiMG+hYkUrmEKSHn0xrBiNjudaOFZv9sTc7HX/trUgkC6jWY97lohpySX73y9LHpPs=
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+# sudo: false # route your build to the container-based infrastructure for a faster build

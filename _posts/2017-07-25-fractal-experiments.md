@@ -264,7 +264,7 @@ The way how it looks or feels depends on the "color". The exact same state can l
         </button>
       </div>
       <div class="modal-body">
-        <img class="modal-image" modal-image src="" alt="fractal" src="#" />
+        <img class="modal-image" modal-image src="" alt="fractal" src="" />
       </div>
       <div class="modal-footer">
         <a class="modal-link btn btn-primary" href="" target="_blank">
