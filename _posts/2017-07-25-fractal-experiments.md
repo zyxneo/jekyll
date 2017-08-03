@@ -33,6 +33,8 @@ The "images" itself are - lets say - invisible, those are only mathematical coor
   </div>
 </div>
 
+<!--more-->
+
 The way down into the details is theoretically infinite.
 The shapes repeating continuously, but they are slightly different over and over.
 

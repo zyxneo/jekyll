@@ -19,6 +19,8 @@ author: Szilágyi Balázs
 description: > # this means to ignore newlines until "baseurl:"
   This is a demonstrational page of development tools, techniques, experiments and references.
 github_username: zyxneo
+repository: zyxneo/zyxneo.github.io
+github: [metadata]
 
 # Server
 baseurl: "" # does not include hostname. the subpath of your site, e.g. /blog
@@ -50,7 +52,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-plugins:   []
+plugins_dir:   []
 
 # Conversion
 markdown:    kramdown

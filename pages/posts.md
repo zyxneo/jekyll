@@ -6,7 +6,7 @@ permalink: /posts/
 
 <div class="posts">
 
-  <h1>{{ site.title }}</h1>
+  <h1>Posts</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
