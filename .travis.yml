@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.2.2
 
-install: gem install minima github-pages
+install: gem install minima github-pages html-proofer
 script: bundle exec jekyll build && htmlproofer ./_site --only-4xx
 
 env:
